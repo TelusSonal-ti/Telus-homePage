@@ -1,0 +1,36 @@
+@mixin style() {
+    background: none;
+            outline: none;
+            border: none;
+            font-size: 1.4rem;
+    
+}
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 3rem; 
+        
+        .item{
+            padding: 0.5rem;
+            border-bottom: 4px solid $primary-color;
+            margin-bottom: 1.5rem;
+        }
+        .item_input{
+            @include style();
+            color: $primary-color;
+             width: 245px;
+        }
+        .editButton{
+            @include style();
+            color: $secondary-color;
+            margin: 0 0.5rem;
+            cursor: pointer;
+        }
+        .removeButton{
+            color: #E00;
+            @extend .editButton;
+        }
+    }
